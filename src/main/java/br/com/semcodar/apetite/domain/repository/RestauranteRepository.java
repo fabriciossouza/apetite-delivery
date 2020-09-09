@@ -1,7 +1,7 @@
-package br.com.semcodar.apetite.repository;
+package br.com.semcodar.apetite.domain.repository;
 
 
-import br.com.semcodar.apetite.model.Restaurante;
+import br.com.semcodar.apetite.domain.model.Restaurante;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

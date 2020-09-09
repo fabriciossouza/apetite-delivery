@@ -1,4 +1,4 @@
-package br.com.semcodar.apetite.model;
+package br.com.semcodar.apetite.domain.model;
 
 
 import lombok.Data;
@@ -14,12 +14,15 @@ import static javax.persistence.GenerationType.IDENTITY;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
 @Entity
-public class FormaPagamento {
+public class Permissao {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
+
+    @Column(nullable = false)
+    private String nome;
 
     @Column(nullable = false)
     private String descricao;

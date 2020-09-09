@@ -1,4 +1,4 @@
-package br.com.semcodar.apetite.model;
+package br.com.semcodar.apetite.domain.model;
 
 
 import lombok.Data;
@@ -14,7 +14,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
 @Entity
-public class Cozinha {
+public class FormaPagamento {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -22,6 +22,6 @@ public class Cozinha {
     private Long id;
 
     @Column(nullable = false)
-    private String nome;
+    private String descricao;
 
 }

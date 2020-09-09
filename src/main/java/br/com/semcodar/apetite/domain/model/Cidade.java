@@ -1,4 +1,4 @@
-package br.com.semcodar.apetite.model;
+package br.com.semcodar.apetite.domain.model;
 
 
 import lombok.Data;
@@ -11,7 +11,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
 @Entity
-public class Estado {
+public class Cidade {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -20,5 +20,9 @@ public class Estado {
 
     @Column(nullable = false)
     private String nome;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Estado estado;
 
 }
