@@ -1,4 +1,4 @@
-package br.com.semcodar.apetite.model;
+package br.com.semcodar.apetite.domain.model;
 
 
 import lombok.Data;
@@ -6,12 +6,14 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
+import java.math.BigDecimal;
+
 import static javax.persistence.GenerationType.IDENTITY;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
 @Entity
-public class Cidade {
+public class Restaurante {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
@@ -21,8 +23,11 @@ public class Cidade {
     @Column(nullable = false)
     private String nome;
 
+    @Column(nullable = false)
+    private BigDecimal taxaFrete;
+
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Estado estado;
+    private Cozinha cozinha;
 
 }
